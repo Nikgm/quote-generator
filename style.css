@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+html, body{
+    overflow-x: hidden;
+    background-color: #3AC162 !important;
+}
+
+#content{
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+}
+
+header{
+    color: white;
+    padding-top: 1rem;
+}
+
+#header-container{
+    width: 70%;
+    margin: 0 auto;
+}
+
+#title{
+    font-family: 'Courgette', 'san serif';
+    font-size: 4rem;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.3);
+}
+
+#header-container button{
+    background-color: rgba(0, 0, 0, 0.1);
+    float: right;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+#change-btn{
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+#quote-container{
+    background-color: rgba(0, 0, 0, 0.1);
+    border-left: 5px solid rgba(0, 0, 0, 0.3); 
+    font-size: 2.5rem;
+    font-family: 'Courgette', 'san serif';
+    color: white;
+    margin-top: 5rem;
+}
+
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+}
+
+#image{
+    width: 12rem;
+    transform-origin: bottom right;
+    float: left;
+    animation-name: example;
+    animation-duration: 2s;
+}
+
+@keyframes example {
+    from {transform: rotate(-90deg);}
+    to {transform: rotate(0deg);}
+  }

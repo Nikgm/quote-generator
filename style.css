@@ -24,6 +24,7 @@ html, body{
 header{
     color: white;
     padding-top: 1rem;
+    display: flex;
 }
 
 #header-container{
@@ -53,8 +54,8 @@ header{
 
 #quote-container{
     background-color: rgba(0, 0, 0, 0.1);
-    border-left: 5px solid rgba(0, 0, 0, 0.3); 
-    font-size: 2.5rem;
+    border-left: 5px solid rgba(0, 0, 0, 0.3);
+    font-size: 200%;
     font-family: 'Courgette', 'san serif';
     color: white;
     margin-top: 5rem;
@@ -69,15 +70,41 @@ footer{
     width: 80vw;
 }
 
-#image{
-    width: 12rem;
-    transform-origin: bottom right;
-    float: left;
-    animation-name: example;
+img{
+    float: none;
+    display: block;
+    margin: 0 auto;
     animation-duration: 2s;
 }
 
-@keyframes example {
+.bottom-right{
+    transform-origin: bottom right;
+    animation-name: rotate-from-right;
+    float: left;
+}
+
+.bottom-left{
+    transform-origin: bottom left;
+    animation-name: rotate-from-left;
+    float: right;
+}
+
+.coming-up{
+    transform-origin: bottom;
+    animation-name: coming-up;
+}
+
+@keyframes rotate-from-right {
     from {transform: rotate(-90deg);}
     to {transform: rotate(0deg);}
-  }
+}
+
+@keyframes rotate-from-left{
+    from {transform: rotate(90deg);}
+    to {transform: rotate(0deg);}
+}
+
+@keyframes coming-up{
+    from {transform: translateY(200px)}
+    to {transform: translateY(0px);}
+}

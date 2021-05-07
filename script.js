@@ -49,16 +49,15 @@ const pickquote = () =>{
         $('img').attr('src',quotePicked.image);
     }   
 }
-
-windowMatch = true;
+  
 const windowSize = matchMedia('(max-width:767px)')
-windowSize.addEventListener('change',({matches})=>{
-    return windowMatch = matches
+$(windowSize).change(function(){
+    return this.matches
 })
 
 
 $('#change-btn').click(function(){
-    if (windowMatch){
+    if (windowSize.matches){
         $('img').removeClass()
         $('body').width()
         pickquote();

@@ -49,7 +49,8 @@ const pickquote = () =>{
         $('img').attr('src',quotePicked.image);
     }   
 }
-  
+
+
 const windowSize = matchMedia('(max-width:767px)')
 $(windowSize).change(function(){
     return this.matches
@@ -57,7 +58,7 @@ $(windowSize).change(function(){
 
 
 $('#change-btn').click(function(){
-    if (windowSize.matches){
+    if (windowSize.matches && ($(window).width()<=766)){
         $('img').removeClass()
         $('body').width()
         pickquote();
